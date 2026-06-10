@@ -1,5 +1,5 @@
 #!/bin/bash
-cp /home/site/wwwroot/.env /home/site/wwwroot/.env.backup 2>/dev/null
+cp /home/site/wwwroot/default /etc/nginx/sites-available/default
 cd /home/site/wwwroot
 php artisan config:cache
 php artisan route:cache
