@@ -297,7 +297,7 @@
       placeholder: 'Buscar código o descripción...',
       load: function(query, callback) {
         if (!query.length) return callback();
-        fetch('/api/productos/buscar?q=' + encodeURIComponent(query))
+        fetch('{{ url("api/productos/buscar") }}?q=' + encodeURIComponent(query))
           .then(response => response.json())
           .then(json => {
             callback(json);
